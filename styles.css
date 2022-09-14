@@ -214,7 +214,32 @@ button {
   .card {
     display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
     /* flex-direction: column; */
   }
 }
+
+
+
+@media only screen and (min-width: 992px) {
+
+.card{
+
+display: grid;
+
+
+
+}
+#histories{
+
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-column-gap:10px ;
+grid-row-gap:10px ;
+font-size: small;
+
+}
+
+
+}
+
