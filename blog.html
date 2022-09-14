@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+
+    <h3 style="text-align:center">Frequently Asked Questions</h3>
+    
+<section class="container">
+
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Q.1. Local Storage Vs Session Storage
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>#1.Depending on your needs, you can use local or session storage to store data. Both storage methods are similar to cookies but without the same privacy concerns surrounding cookies. Therefore, most modern websites prefer to use web storage methods only or combine them with cookies as a fallback.<br>
+
+                #2.Unlike cookies, local storage and session storage do not send data to the server via HTTP headers. You should use them for client-side functionality only.<br>
+                
+                #3.Additionally, local and session storage each have a storage limit of around 5 MB per domain. They provide more storage than cookies, which only have a capacity of 4 KiB per cookie.<br>
+
+                #4.Since local storage is persistent, it's your best bet to retain data across user visits. If you want to store site preferences or cache long-term data, local storage is appropriate. You may not want to store more sensitive data using local storage, since it is permanent.<br>
+
+
+                Session storage is unique to each browser tab. If you open a new tab and navigate to the same site, you'll start a new session with its own storage. However, if you use a "duplicate tab" feature in your browser, that may reuse the same session. You can't rely too much on the specific details of a "session". Instead, focus on the core concept: session storage is temporary.
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Q2. difference between global scope and block scope in JS?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong><h4>Global Scope</h4>
+                The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.<br>
+
+
+                <h4>Block Scope</h4>
+                Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Q3. How event loop is Js work?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop.
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Q.4. How and why we get undefined in Js?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>
+                    First of all a variable without value always store undefined.<br>
+                    If we assign nothing in variable but we want access this then we get undefined.<br>
+                    
+                    A few examples:<br>
+
+                    let number;<br>
+                    number;     // => undefined<br>
+                    let movie = { name: 'Interstellar' };<br>
+                    movie.year; // => undefined<br>
+                    let movies = ['Interstellar', 'Alexander'];<br>
+                    movies[3];  // => undefined<br>
+              </div>
+            </div>
+          </div>
+
+         
+
+      </div>
+
+      
+      
+      <div style="text-align:center">
+        <small> For any query, please contact us at arkancse@gmail.com</small>
+
+      </div>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
