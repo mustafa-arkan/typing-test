@@ -46,7 +46,8 @@ const typeController = (e) => {
 
   // Handle backspace press
   if (newLetter == "Backspace") {
-    userText = userText.slice(0, userText.length - 1);
+    userText = userText.slice(0, userText.length - 1);   
+    errorCount++
     return display.removeChild(display.lastChild);
   }
 
@@ -75,8 +76,11 @@ const typeController = (e) => {
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
+    //errorCount ++
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+
+    //errorCount ++
   }
 
 
@@ -121,6 +125,7 @@ const gameOver = () => {
   display.innerHTML = "";
   // make it inactive
   display.classList.add("inactive");
+  //errorCount++
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
@@ -155,7 +160,7 @@ const start = () => {
     
 
  
-  
+ 
 return;
 
   let count = 3;
@@ -176,26 +181,34 @@ return;
     // finished timer
     if (count == 0) {
 
-      
+      //errorCount ++
       
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
+      //errorCount ++
       countdownOverlay.style.display = "flex";
+      //errorCount ++
       display.classList.remove("inactive");
+      //errorCount ++
 
       clearInterval(startCountdown);
 
-      
+      //errorCount ++
 
 countdownOverlay.style.display="none"
 
-
+//errorCount ++
       startTime = Math.floor(new Date().getTime());
+      //errorCount ++
      
     }
+    //errorCount ++
     count--;
+
+    //errorCount ++
     
   }, 1000);
+  //errorCount ++
   
 };
 
