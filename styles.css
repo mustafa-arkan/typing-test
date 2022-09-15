@@ -102,11 +102,7 @@ body {
 .hidden {
   display: none;
 
-  /* position: absolute;
-  left: 50%;
-top: 50%;
-transform: translate(-50%,-50%); */
-
+  
 }
 .title {
   text-align: center;
@@ -210,6 +206,7 @@ button {
   .box-container {
     padding: 0 20px;
     width: 100%;
+    
   }
   .card {
     display: grid;
