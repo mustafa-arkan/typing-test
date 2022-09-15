@@ -26,7 +26,7 @@ fetch("./texts.json")
 
   .then((res) => res.json())
   .then((data) => {
-    questionText = data[Math.floor(Math.random() * data.length)];
+    questionText = data[Math.round(Math.random() * data.length)];
     //questionText = data(Math.random() * data.length);
     question.innerHTML = questionText;
   });
@@ -47,7 +47,7 @@ const typeController = (e) => {
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);   
-    errorCount++
+   // errorCount++
     return display.removeChild(display.lastChild);
   }
 
@@ -80,7 +80,7 @@ const typeController = (e) => {
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
 
-    
+    errorCount++
   }
 
 
@@ -198,7 +198,7 @@ return;
 countdownOverlay.style.display="none"
 
 
-      startTime = Math.floor(new Date().getTime());
+      startTime = Math.round(new Date().getTime());
       
      
     }
